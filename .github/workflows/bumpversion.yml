@@ -11,12 +11,13 @@ jobs:
     - uses: actions/checkout@master
     - name: Install dependencies
       run: |
-        python -m pip install -U commitizen
+        python --version
+        python3 -m pip install -U commitizen
     - name: Create bump
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        python -m cz bump
+        python3 -m cz bump
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
