@@ -12,9 +12,6 @@ jobs:
       matrix:
         python-version: ['3.x']
     steps:
-    - name: Pull request merged
-      if: github.event.pull_request.merged == true
-      run: echo merged
     - uses: actions/checkout@master
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
