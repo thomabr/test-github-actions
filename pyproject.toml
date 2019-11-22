@@ -1,3 +1,11 @@
+[tool.commitizen]
+version = "0.1.0"
+tag_format = "v$version"
+files = [
+  "pyproject.toml:version",
+  "VERSION"
+]
+
 [tool.poetry]
 name = "test-github-actions"
 version = "0.1.0"
