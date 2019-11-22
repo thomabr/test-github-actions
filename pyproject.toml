@@ -1,6 +1,6 @@
 [tool.commitizen]
 version = "0.8.2"
-bump_message = """release $current_version → $new_version
+bump_message = """bump: $current_version → $new_version
 
 
 skip-checks: true"""
