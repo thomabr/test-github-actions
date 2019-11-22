@@ -1,7 +1,10 @@
 [tool.commitizen]
 version = "0.8.0"
 tag_format = "v$version"
-bump_message = "release $current_version → $new_version [skip-ci]"
+bump_message = """release $current_version → $new_version
+
+
+skip-checks: true"""
 files = [
   "pyproject.toml:version",
   "VERSION"
