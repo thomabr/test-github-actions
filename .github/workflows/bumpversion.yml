@@ -7,17 +7,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 3
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
     steps:
     - uses: actions/checkout@master
     - name: Install dependencies
       run: |
         python --version
-        python3 -m pip install -U commitizen
+        python -m pip install -U commitizen
     - name: Create bump
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        python3 -m cz bump
+        python -m cz bump
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
