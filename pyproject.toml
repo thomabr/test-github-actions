@@ -1,5 +1,5 @@
 [tool.commitizen]
-version = "0.7.0"
+version = "0.8.0"
 tag_format = "v$version"
 bump_message = "release $current_version → $new_version [skip-ci]"
 files = [
@@ -9,7 +9,7 @@ files = [
 
 [tool.poetry]
 name = "test-github-actions"
-version = "0.7.0"
+version = "0.8.0"
 description = "Github actions test"
 authors = ["Santiago Fraire Willemoës <santiwilly@gmail.com>"]
 license = "MIT"
