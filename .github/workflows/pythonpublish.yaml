@@ -19,9 +19,3 @@ jobs:
         python -m pip install --pre -U poetry
         poetry --version
         poetry install
-    - name: Build and publish
-      env:
-        PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
-      run: |
-        ./scripts/publish
